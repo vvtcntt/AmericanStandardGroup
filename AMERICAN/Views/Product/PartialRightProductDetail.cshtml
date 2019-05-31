@@ -1,0 +1,51 @@
+﻿@model AMERICAN.Models.tblConfig
+<div id="RightProduct">
+    <div id="Support">
+        <div id="img_Support"></div>
+
+        <div id="Contact_Support">
+            <span class="Address"><span></span> @Model.Address1</span>
+            <div class="Clear"></div>
+            <span class="Hotline"><span></span> @Model.Hotline1</span>
+            <div class="Clear"></div>
+
+            <span class="Mobile"><span></span> @Model.Mobile1</span>
+            <div class="Clear"></div>
+
+            <span class="Address"><span></span> @Model.Address2</span>
+            <div class="Clear"></div>
+
+            <span class="Hotline"><span></span> @Model.Hotline2</span>
+            <div class="Clear"></div>
+
+            <span class="Mobile"><span></span> @Model.Mobile2</span>
+            <div class="Clear"></div>
+
+            <span class="Email"><span></span> @Model.Email</span>
+
+        </div>
+        <div id="ListSupport">
+
+            <span class="httt">Hỗ trợ trực tuyến</span>
+       @Html.Raw(ViewBag.chuoisupport)
+            <div class="line-Support"></div>
+        </div>
+    </div>
+    <div id="MenuProduct">
+        <div class="nVar_Left">
+            <span>Danh mục liên quan</span>
+        </div>
+        <div id="Content_MenuProduct">
+            @Html.Raw(ViewBag.chuoimenu)
+
+        </div>
+    </div>
+    <div id="ProductLienquan">
+        <div class="nVar_Left">
+            <span>Sản phẩm được xem nhiều nhất</span>
+        </div>
+        <div id="ContentProductlienquan">
+            @Html.Raw(ViewBag.chuoiproduct)
+        </div>
+    </div>
+</div>
