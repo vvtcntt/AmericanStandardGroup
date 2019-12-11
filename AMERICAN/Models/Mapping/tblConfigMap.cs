@@ -81,7 +81,12 @@ namespace AMERICAN.Models.Mapping
 
             this.Property(t => t.Host)
                 .HasMaxLength(200);
-
+            this.Property(t => t.TitleSale)
+             .HasMaxLength(50);
+            this.Property(t => t.ImageSale)
+                .HasMaxLength(50);
+            this.Property(t => t.TimeWork)
+            .HasMaxLength(50);
             // Table & Column Mappings
             this.ToTable("tblConfig");
             this.Property(t => t.ID).HasColumnName("ID");
@@ -119,7 +124,12 @@ namespace AMERICAN.Models.Mapping
             this.Property(t => t.Host).HasColumnName("Host");
             this.Property(t => t.Port).HasColumnName("Port");
             this.Property(t => t.Timeout).HasColumnName("Timeout");
-            this.Property(t => t.Language).HasColumnName("Language");
+            this.Property(t => t.Language).HasColumnName("Language"); this.Property(t => t.TitleSale).HasColumnName("TitleSale");
+            this.Property(t => t.StartDateSale).HasColumnName("StartDateSale");
+            this.Property(t => t.EndDateSale).HasColumnName("EndDateSale");
+            this.Property(t => t.EndDateSale).HasColumnName("EndDateSale");
+            this.Property(t => t.ImageSale).HasColumnName("ImageSale");
+            this.Property(t => t.TimeWork).HasColumnName("TimeWork");
         }
     }
 }

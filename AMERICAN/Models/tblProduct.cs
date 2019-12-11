@@ -31,6 +31,8 @@ namespace AMERICAN.Models
         public Nullable<bool> ProductSale { get; set; }
         public Nullable<bool> New { get; set; }
         public Nullable<bool> ViewHomes { get; set; }
+        public Nullable<bool> Priority { get; set; }
+
         public Nullable<int> Visit { get; set; }
         public string Tag { get; set; }
         public string Title { get; set; }

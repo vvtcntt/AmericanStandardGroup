@@ -78,5 +78,9 @@ namespace AMERICAN.Controllers.Display.Footter
             ViewBag.chuoi = chuoi;
             return PartialView();
         }
+        public PartialViewResult callPartial()
+        {
+            return PartialView(db.tblConfigs.First());
+        }
     }
 }

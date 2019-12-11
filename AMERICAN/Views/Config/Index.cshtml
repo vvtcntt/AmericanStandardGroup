@@ -27,7 +27,17 @@
         });
     });
 </script>
-
+<script type="text/javascript">
+    $(function () {
+        $("#SelectImageSale").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $("#ImageSale").val(fileUrl);
+            };
+            finder.popup();
+        });
+    });
+</script>
 
 <script type="text/javascript">
     var editor;
@@ -337,6 +347,53 @@
            </div>
        </div>
 
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Thời gian làm việc :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.TimeWork, new { @class = "Leght_2" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>tiêu đề chương trình khuyến mại :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.TitleSale, new { @class = "Leght_2" })
+
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Ảnh banner khuyến mại :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(p => p.ImageSale, new { @class = "Leght_3" })&nbsp;<input id="SelectImageSale" type="button" value="Browser" />
+
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Ngày bắt đầu khuyến mại :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(model => model.StartDateSale, new { @type = "date", @class = "form-control datepicker", @Value = Model.StartDateSale.ToString("yyyy-MM-dd") })
+               @Html.ValidationMessageFor(model => model.StartDateSale, "", new { @class = "text-danger" })
+           </div>
+       </div>
+       <div class="tr_1">
+           <div class="left_tr1">
+               <span>Ngày kết thúc khuyến mại :</span>
+           </div>
+           <div class="Right_tr1">
+               @Html.TextBoxFor(model => model.EndDateSale, new { @type = "date", @class = "form-control datepicker", @Value = Model.EndDateSale.ToString("yyyy-MM-dd") })
+               @Html.ValidationMessageFor(model => model.EndDateSale, "", new { @class = "text-danger" })
+
+
+
+           </div>
+       </div>
        <div class="tr_1">
            <div class="left_tr1">
            </div>

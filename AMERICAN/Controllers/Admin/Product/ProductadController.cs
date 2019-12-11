@@ -478,6 +478,8 @@ namespace AMERICAN.Controllers.Admin.Productad
                     }
                     bool Vat = (collection["Vat"] == "True") ? true : false;
                     bool ProductSale = (collection["ProductSale"] == "True") ? true : false;
+                    bool Priority = (collection["Priority"] == "True") ? true : false;
+
                     bool Note = (collection["Note"] == "True") ? true : false;
                     string Warranty = collection["Warranty"];
                     string Address = collection["Address"];
@@ -743,6 +745,46 @@ namespace AMERICAN.Controllers.Admin.Productad
             db.SaveChanges();
             #region[Updatehistory]
             Updatehistoty.UpdateHistory("Edit  Active Product", Request.Cookies["Username"].Values["FullName"].ToString(), Request.Cookies["Username"].Values["UserID"].ToString());
+            #endregion
+            result = "Active Updated.";
+            return Json(new { result = result });
+        }
+        public ActionResult ProductEditProductSale(string chk, string nchecked)
+        {
+
+            var Product = db.tblProducts.Find(int.Parse(chk));
+            var result = string.Empty;
+            if (nchecked == "true")
+            {
+                Product.ProductSale = false;
+            }
+            else
+            { Product.ProductSale = true; }
+
+            //db.Entry(Product).State = System.Data.EntityState.Modified;
+            db.SaveChanges();
+            #region[Updatehistory]
+            Updatehistoty.UpdateHistory("Edit  ProductSale Product", Request.Cookies["Username"].Values["FullName"].ToString(), Request.Cookies["Username"].Values["UserID"].ToString());
+            #endregion
+            result = "Active Updated.";
+            return Json(new { result = result });
+        }
+        public ActionResult ProductEditPriority(string chk, string nchecked)
+        {
+
+            var Product = db.tblProducts.Find(int.Parse(chk));
+            var result = string.Empty;
+            if (nchecked == "true")
+            {
+                Product.Priority = false;
+            }
+            else
+            { Product.Priority = true; }
+
+            //db.Entry(Product).State = System.Data.EntityState.Modified;
+            db.SaveChanges();
+            #region[Updatehistory]
+            Updatehistoty.UpdateHistory("Edit  Priority Product", Request.Cookies["Username"].Values["FullName"].ToString(), Request.Cookies["Username"].Values["UserID"].ToString());
             #endregion
             result = "Active Updated.";
             return Json(new { result = result });

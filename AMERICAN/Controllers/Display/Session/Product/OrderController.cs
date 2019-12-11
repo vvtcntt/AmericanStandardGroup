@@ -597,7 +597,6 @@ namespace CMSCODE.Controllers.Display.Product
         }
         public PartialViewResult InputOrder()
         {
-            string name;
             return PartialView();
         }
     }

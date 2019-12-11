@@ -40,5 +40,11 @@ namespace AMERICAN.Models
         public Nullable<int> Port { get; set; }
         public Nullable<int> Timeout { get; set; }
         public Nullable<int> Language { get; set; }
+        public string TitleSale { get; set; }
+        public string ImageSale { get; set; }
+        public string TimeWork { get; set; }
+
+        public DateTime StartDateSale { get; set; }
+        public DateTime EndDateSale { get; set; }
     }
 }

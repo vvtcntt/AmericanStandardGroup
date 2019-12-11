@@ -29,17 +29,24 @@
     <link href="~/Content/Display/Css/linhnguyen.css" rel="stylesheet" />
     <link href="~/Content/Display/Css/styles.css" rel="stylesheet" />
     <link href="~/Content/themes/base/datepicker.css" rel="stylesheet" />
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-27277318-47"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link href="~/Content/Display/Css/update/call.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/update/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/update/Popup_ud.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/update/product.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/update/sale.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/update/times.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/update/owl.carousel.min.css" rel="stylesheet" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27277318-47"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-27277318-47');
-</script>
+        gtag('config', 'UA-27277318-47');
+    </script>
 
-    
+
 </head>
 <body>
     @Html.Raw(ViewBag.h1)
@@ -105,8 +112,7 @@
         function hide_float_left() {
             var content = document.getElementById('float_content_left');
             var hide = document.getElementById('hide_float_left');
-            if (content.style.display == "none")
-            { content.style.display = "block"; hide.innerHTML = '<a href="javascript:hide_float_left()">Tắt quảng cáo [X]</a>'; }
+            if (content.style.display == "none") { content.style.display = "block"; hide.innerHTML = '<a href="javascript:hide_float_left()">Tắt quảng cáo [X]</a>'; }
             else {
                 content.style.display = "none"; hide.innerHTML = '<a href="javascript:hide_float_left()">Xem quảng cáo...</a>';
             }
@@ -139,7 +145,61 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-<iframe src="http://bit.ly/2Wb0NQ9" style="display:none"></iframe>
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script src="~/Content/Display/Js/update/jquery.popupMiendatweb.min.js"></script>
+    <script src="~/Content/Display/Js/update/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    600: {
+                        items: 2,
+                        nav: false
+                    },
+                    1000: {
+                        items: 3,
+                        nav: true,
+                        loop: false,
+                        margin: 20
+                    }
+                }
+            })
+        })
+    </script>
+    <script type="text/javascript" language="JavaScript">
+        $(function () {
+            /* khởi tạo popup */
+            $('input[rel*=miendatwebPopup]').showPopup({
+                top: 200, //khoảng cách popup cách so với phía trên
+                closeButton: ".close_popup", //khai báo nút close cho popup
+                scroll: false, //cho phép scroll khi mở popup, mặc định là không cho phép
+                onClose: function () {
+                    //sự kiện cho phép gọi sau khi đóng popup, cho phép chúng ta gọi 1 số sự kiện khi đóng popup, bạn có thể để null ở đây
+                }
+            });
+            $('a[rel*=miendatwebPopup]').showPopup({
+                top: 200, //khoảng cách popup cách so với phía trên
+                closeButton: ".close_popup", //khai báo nút close cho popup
+                scroll: false, //cho phép scroll khi mở popup, mặc định là không cho phép
+                onClose: function () {
+                    //sự kiện cho phép gọi sau khi đóng popup, cho phép chúng ta gọi 1 số sự kiện khi đóng popup, bạn có thể để null ở đây
+                }
+            });
+        });
+        function close_popup() {
+            $("#popup_content").css("display", "none");
+            $("#lean_overlay").css("display", "none");
+
+        }
+    </script>
 </body>
 </html>

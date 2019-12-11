@@ -90,28 +90,22 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
@@ -1329,6 +1323,13 @@
     <Content Include="Content\Display\Css\Product_Rs.css" />
     <Content Include="Content\Display\Css\Sale.css" />
     <Content Include="Content\Display\Css\styles.css" />
+    <Content Include="Content\Display\Css\update\call.css" />
+    <Content Include="Content\Display\Css\update\owl.carousel.min.css" />
+    <Content Include="Content\Display\Css\update\owl.theme.default.min.css" />
+    <Content Include="Content\Display\Css\update\Popup_ud.css" />
+    <Content Include="Content\Display\Css\update\product.css" />
+    <Content Include="Content\Display\Css\update\sale.css" />
+    <Content Include="Content\Display\Css\update\times.css" />
     <Content Include="Content\Display\data.html" />
     <Content Include="Content\Display\Datadetail.html" />
     <Content Include="Content\Display\Default.html" />
@@ -1415,6 +1416,9 @@
     <Content Include="Content\Display\Js\js.js" />
     <Content Include="Content\Display\Js\PopupDetailProduct.js" />
     <Content Include="Content\Display\Js\Scroll.js" />
+    <Content Include="Content\Display\Js\update\jquery.popupMiendatweb.min.js" />
+    <Content Include="Content\Display\Js\update\owl.carousel.min.js" />
+    <Content Include="Content\Display\Js\update\script.js" />
     <Content Include="Content\Display\ListNews.html" />
     <Content Include="Content\Display\ListProduct.html" />
     <Content Include="Content\Display\Newdetail.html" />
@@ -1715,6 +1719,10 @@
     <Content Include="Views\Shared\_LayoutDefault.cshtml" />
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
     <Content Include="Views\Shared\_LayoutSale.cshtml" />
+    <Content Include="Views\Footter\callPartial.cshtml" />
+    <Content Include="Views\ProductSale\detail.cshtml" />
+    <Content Include="Views\Sale\detail.cshtml" />
+    <Content Include="Views\ProductSynDisplay\list.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

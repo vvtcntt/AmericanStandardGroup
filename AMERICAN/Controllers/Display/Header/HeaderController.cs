@@ -26,7 +26,7 @@ namespace AMERICAN.Controllers.Display.Header
         }
         public PartialViewResult PartialnVar()
         {
-            return PartialView();
+            return PartialView(db.tblConfigs.FirstOrDefault());
         }
       public PartialViewResult PartialMenu()
         {
@@ -34,6 +34,9 @@ namespace AMERICAN.Controllers.Display.Header
             string chuoi = "";
             chuoi += "<div class=\"Menu\">";
             chuoi += "<ul class=\"ul1\">";
+            chuoi += "<li class=\"li1\">";
+            chuoi += "<a href=\"/san-pham-americanstandard-dong-bo\" title=\"Sản phẩm american  standard dồng bộ\"><span></span> Sản phẩm đồng bộ</a>";
+            chuoi += "</li>";
             for (int i = 0; i < listParent.Count;i++ )
             {
              

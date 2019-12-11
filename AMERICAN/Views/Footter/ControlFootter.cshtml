@@ -62,45 +62,53 @@
     <div class="Tear_Info_2">
         <span class="Name">Đăng ký chương trình khuyến mại</span>
         <div class="line_Bo"></div>
-@using (Html.BeginForm("Command", "Footter", FormMethod.Post))
-{
-        <div class="Content_ft">
-            <span class="Des">
-                Nếu bạn chưa mua sản phẩm khi chương  trình
-                khuyến mại diễn ra thì hình thức  “ĐĂNG KÝ CHƯƠNG
-                TRÌNH KHUYẾN MẠI” sẽ giúp bạn giữ được giá tại
-                thời điểm khuyến mại !
-            </span>
-            <div class="Row">
-                <div class="col_1">Họ và tên :</div>
-                <div class="col_2"><input type="text"   name="txtName" id="txtName" /></div>
-            </div>
-            <div class="Row">
-                <div class="col_1">Điện thoại :</div>
-                <div class="col_2"><input type="text"   name="txtHotline" id="txtHotline" /></div>
-            </div>
-            <div class="Row">
-                <div class="col_1">Kiểu đăng ký :</div>
-                <div class="col_2">
-                    <select id="selectcate" name="selectcate">
-                        <option value="0">Đăng ký nhận mail</option>
-                        <option value="1">Đăng ký giữ giá</option>
-                    </select>
+        @using (Html.BeginForm("Command", "Footter", FormMethod.Post))
+        {
+            <div class="Content_ft">
+                <span class="Des">
+                    Nếu bạn chưa mua sản phẩm khi chương  trình
+                    khuyến mại diễn ra thì hình thức  “ĐĂNG KÝ CHƯƠNG
+                    TRÌNH KHUYẾN MẠI” sẽ giúp bạn giữ được giá tại
+                    thời điểm khuyến mại !
+                </span>
+                <div class="Row">
+                    <div class="col_1">Họ và tên :</div>
+                    <div class="col_2"><input type="text" name="txtName" id="txtName" /></div>
+                </div>
+                <div class="Row">
+                    <div class="col_1">Điện thoại :</div>
+                    <div class="col_2"><input type="text" name="txtHotline" id="txtHotline" /></div>
+                </div>
+                <div class="Row">
+                    <div class="col_1">Kiểu đăng ký :</div>
+                    <div class="col_2">
+                        <select id="selectcate" name="selectcate">
+                            <option value="0">Đăng ký nhận mail</option>
+                            <option value="1">Đăng ký giữ giá</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="Row">
+                    <button type="submit" id="btnSend" name="btnSend">Đăng ký</button>
                 </div>
             </div>
-            <div class="Row">
-                <button type="submit" id="btnSend" name="btnSend">Đăng ký</button>
-            </div>
-        </div>
-}
+        }
     </div>
+</div>
+<div class="Clear"></div>
+<div class="Clear"></div>
+<div id="channel">
+    <span>Đăng ký và theo dõi sản phẩm trên</span>
+
+    <ul><li><a href="@Model.FanpageYoutube" title="youtube"><img src="~/Content/Display/iCon/update/youtube.png" title="youtube" /></a></li><li><a href="@Model.FanpageYoutube" title="facebook"><img src="~/Content/Display/iCon/update/facebook-icon.jpg" title="facebook" /></a></li></ul>
 </div>
 <div class="Clear"></div>
 <div id="BannerTimes"></div><a href="http://thegioibinhnonglanh.vn" style="color:#fff; font-size:3px; margin:0px; display:inline-block" title="Bình nóng lạnh loại nào tốt nhất">Bình nóng lạnh loại nào tốt nhất</a> <a style="color:#fff; font-size:3px; margin:0px; display:inline-block" href="http://thayloilocnuoc.com" title="Thay lõi lọc nước Kangaroo tại nhà">Thay lõi lọc nước Kangaroo tại nhà</a>
 
 <div class="Clear"></div>
 <div id="Authorship" style=" width:100%; height:21px; float:left; margin:2px 0px; text-align:center">
-    <nav>@Html.Raw(Model.DMCA)<a href="https://plus.google.com/@Model.Authorship?rel=author"><img src="~/Content/Display/iCon/GoogleAuthorShip.png" alt="Đăng ký google authorShip" /></a>
+    <nav>
+        @Html.Raw(Model.DMCA)<a href="https://plus.google.com/@Model.Authorship?rel=author"><img src="~/Content/Display/iCon/GoogleAuthorShip.png" alt="Đăng ký google authorShip" /></a>
     </nav>
     <div class="Clear"></div>
 </div>
@@ -129,9 +137,10 @@
     </div>
     <div class="Clear"></div>
 </div>
-@if(Request.Browser.IsMobileDevice==false)
+@if (Request.Browser.IsMobileDevice == false)
 {@Html.Raw(Model.CodeChat)}
-@if(Request.Browser.IsMobileDevice)
+@if (Request.Browser.IsMobileDevice)
 {
-Html.RenderAction("MenuMobine", "Footter");
+    Html.RenderAction("MenuMobine", "Footter");
 }
+@{ Html.RenderAction("callPartial", "Footter");}
